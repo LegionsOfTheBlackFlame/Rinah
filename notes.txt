@@ -1,0 +1,22 @@
+
+/// PREVIOUSLY!... ///
+!! Fetch from the endpoint seems to work but getting a console error:
+    Error occured fetching data:  SyntaxError: JSON.parse: unexpected character at line 1 column 1 of the JSON data
+>> Appearant issue at sql lvl; table doesn't seem to be updated.
+
+///STRUCTURAL///
+
+/// LOGIC ///
+>> DATABASE:
+    
+
+
+// !!! ///
+>> Database sorting requires a second default system
+>> Database archives require backup systems
+
+/// QUESTIONS ///
+>> does 'createConnection' open a running connection to my database or just sets it up?
+>> what's a better choice between pool and connection for my react app?
+>> how do I close the database connection without getting err404?
+

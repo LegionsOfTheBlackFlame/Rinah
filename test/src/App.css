@@ -1,0 +1,106 @@
+
+* {
+  /* outline: 2px solid red; */
+}
+
+:root {
+--color-main: #000000;
+--color-accent: #555555;
+--color-cta: #550055;
+--color-text-titles: #ffffff;
+--color-text: #aaaaaa;
+
+}
+
+/* GENERAL RULES */
+.sect {
+  width: 80%;
+  margin: 50px auto;
+  
+}
+
+.button {
+  display: block;
+padding: 5% 10%;
+border-radius: 30px;
+
+background-color: var(--color-cta);
+
+}
+
+.button > * {
+  color: var(--color-text-titles);
+  text-decoration: none;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 75px;
+}
+.header-logo {
+  height: 100%;
+}
+
+.navmenu {
+  display: flex;
+  width: fit-content;
+  margin: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.navmenu > a {
+  margin: auto 5%;
+  text-decoration: none;
+}
+
+/* MAIN */
+.main {
+  height: 750px;
+}
+
+/* FOOTER */
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  
+  height: 250px;
+}
+
+.footer-part > img {
+  width: 100%;
+}
+
+.c-statement {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+/* WEBSERVICES */
+
+.services-container {
+  display: flex;
+}
+
+.service-card {
+  display: block;
+  width: 250px;
+  height: 350px;
+  margin: 20px;
+  padding: 20px;
+}
+.buttons-container {
+  display: flex;
+}
+
+/* WEBBOOK */
+
+.booking-form > * {
+  display: block;
+  
+}
+.calendar-container {
+  width: 250px;
+}
