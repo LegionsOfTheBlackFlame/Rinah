@@ -53,8 +53,6 @@ function fetchConditional(table, column, value, callback) {
             return callback(error, null);
         }
 
-        console.log('Fetched rows:', results);
-
         callback(null, results);
 
       
@@ -64,6 +62,8 @@ function fetchConditional(table, column, value, callback) {
 
 //Post user messages sent from the contact page
 function insertIntoTable(table, columns, values, callback) {
+    console.group("Posting to database...");
+    console.log("Affected columns:", columns, " Values being inserted: ", values);
 
     connection.connect();
 
@@ -73,16 +73,9 @@ function insertIntoTable(table, columns, values, callback) {
 
     const sql = `INSERT INTO ${table} (${targetColumns}) VALUES (${valuesPlaceholder})`;
 
-    connection.query(sql, values, (error, results, fields) => {
-        // if (error) {
-        //     console.error('Error inserting data into the database:', error);
-        //     res.status(500).json({ error: 'Internal Server Error' });
-        //   } else {
-        //     console.log('Data inserted successfully:', results);
-        //     res.status(200).json({ message: 'Form submitted successfully' });
-        //   }
-    })
+    connection.query(sql, values, callback);
 }
+
 
 //Post booked event to the calendar table
 
@@ -92,7 +85,7 @@ function insertIntoTable(table, columns, values, callback) {
 
 //Order calendar enteries
 
-
+// Formating post data
 
 module.exports = {
     fetchConditional,

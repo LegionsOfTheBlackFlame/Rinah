@@ -21,9 +21,10 @@
 
 .button {
   display: block;
-padding: 5% 10%;
+padding: 0.5rem 1rem;
 border-radius: 30px;
 
+color: var(--color-text-titles);
 background-color: var(--color-cta);
 
 }
@@ -95,6 +96,17 @@ background-color: var(--color-cta);
   display: flex;
 }
 
+/*  WEBCONTACT */
+
+.contact-form > * {
+ display: block;
+}
+.contact-form > .inputs {
+  margin: 1rem;
+  padding: 0.3rem 1rem;
+  border-radius: 30px;
+}
+
 /* WEBBOOK */
 
 .booking-form > * {
@@ -103,4 +115,22 @@ background-color: var(--color-cta);
 }
 .calendar-container {
   width: 250px;
+}
+
+.month-container {
+  display: flex;
+}
+
+.days-container {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.dates-container {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+
+  outline: 2px solid red;
 }

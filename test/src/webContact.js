@@ -44,11 +44,12 @@ export default function WebContact() {
 
             <form 
             id="ContactForm"
-            onSubmit={handleFormSubmit}
-            className="contact-form">
+            className="contact-form"
+            onSubmit={handleFormSubmit}>
                 <input
                 type="text"
                 name="msg_title"
+                className="inputs msg-title-input"
                 onChange={handleFormChange}
                 value={userMessageData.MessageTitle}
                 placeholder="Title"/>
@@ -56,18 +57,21 @@ export default function WebContact() {
                 <input 
                 type="email"
                 name="msg_sender_email"
+                className="inputs msg-email-input"
                 onChange={handleFormChange}
                 value={userMessageData.SenderEmail}
                 placeholder="example@gmail.com"/>
 
-                <input
+                <textarea
                 type="textbox"
                 name="msg_body"
+                className="inputs msg-text-input"
                 onChange={handleFormChange}
                 value={userMessageData.MessageBody}
+                rows="5" cols="50"
                 placeholder="Your message to us..."/>
 
-                <button type="submit"></button>
+                <button type="submit" className="button msg-submit-button"> Send! </button>
             </form>
 
         </div>
